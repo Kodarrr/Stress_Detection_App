@@ -140,7 +140,7 @@ Consistently high readings across one or more channels result in a high stress c
 ## Authors
 
 - **Shah Md Khalil Ullah** (Roll: 2007090)  
-- **Shayka Islam Shipra** (Roll: 2007110)[file:1]
+- **Shayka Islam Shipra** (Roll: 2007110)
 
 Department of Computer Science and Engineering,  
-Khulna University of Engineering & Technology (KUET), Bangladesh.[file:1]
+Khulna University of Engineering & Technology (KUET), Bangladesh.
