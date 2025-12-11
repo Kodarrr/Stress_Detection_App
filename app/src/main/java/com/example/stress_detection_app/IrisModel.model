@@ -1,0 +1,45 @@
+import weka.core.Instance;
+import weka.core.DenseInstance;
+import weka.classifiers.Classifier;
+import weka.core.Instances;
+import weka.core.FastVector;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+
+public class IrisModel {
+
+    private Classifier model;
+
+    public void loadModel(String modelPath) {
+        try {
+            FileInputStream fileIn = new FileInputStream(modelPath);
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            model = (Classifier) in.readObject();
+            in.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public String predict(float[] features) {
+        try {
+            FastVector attributes = new FastVector();
+            attributes.addElement(new weka.core.Attribute("sepal_length"));
+            attributes.addElement(new weka.core.Attribute("sepal_width"));
+            attributes.addElement(new weka.core.Attribute("petal_length"));
+            attributes.addElement(new weka.core.Attribute("petal_width"));
+
+            Instances dataset = new Instances("IrisDataset", attributes, 0);
+            dataset.setClassIndex(dataset.numAttributes() - 1);
+
+            Instance instance = new DenseInstance(1.0, features);
+            dataset.add(instance);
+
+            double prediction = model.classifyInstance(instance);
+            return dataset.classAttribute().value((int) prediction);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+}

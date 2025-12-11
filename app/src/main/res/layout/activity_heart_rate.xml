@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".HeartRateActivity"
+    android:background="@drawable/background_image">
+
+    <LinearLayout
+        android:id="@+id/appname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="0dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp">
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+
+            android:transitionName="logo_image"
+            />
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/iv2"
+            android:layout_width="165dp"
+            android:layout_height="50dp"
+            android:src="@drawable/app_logo"
+
+            android:transitionName="logo_image"
+            />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/bpmData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Heart Rate Data"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp"/>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/bpmChart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Bar Chart for Last 7 Days Average BPM -->
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/bpmBarChart"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+    android:layout_marginTop="16dp" />
+
+
+</LinearLayout>

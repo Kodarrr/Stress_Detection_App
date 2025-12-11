@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- stress_level_progress.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background of the progress bar -->
+    <item android:id="@android:id/background">
+        <shape>
+            <solid android:color="#e0e0e0"/> <!-- light grey background -->
+            <corners android:radius="10dp"/>
+        </shape>
+    </item>
+
+    <!-- Progress (foreground) -->
+    <item android:id="@android:id/progress">
+        <shape>
+            <solid android:color="#2F7D32"/> <!-- green color for calm -->
+            <corners android:radius="10dp"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/background_image">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- App Header -->
+        <LinearLayout
+            android:id="@+id/appname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/baseline_arrow_back_ios_24"
+                android:contentDescription="Back button"
+                android:transitionName="logo_image" />
+
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="165dp"
+                android:layout_height="50dp"
+                android:src="@drawable/app_logo"
+                android:contentDescription="App logo"
+                android:transitionName="logo_image" />
+        </LinearLayout>
+
+        <!-- Current Noise Level Display -->
+        <TextView
+            android:id="@+id/soundLevelData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/appname"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:text="Noise Level: 0 dB"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Real-time Sound Level Chart -->
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/soundLevelChart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/soundLevelData"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="8dp" />
+
+        <!-- 7-Day Average Noise Level Chart -->
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/noiseBarChart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/soundLevelChart"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Optional: Add a refresh button or other controls here -->
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+android:background="@drawable/background_image"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".StressDetectionActivity">
+        <LinearLayout
+            android:id="@+id/appname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="0dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp">
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_arrow_back_ios_24"
+
+                android:transitionName="logo_image"
+                />
+
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/iv2"
+                android:layout_width="165dp"
+                android:layout_height="50dp"
+                android:src="@drawable/app_logo"
+
+                android:transitionName="logo_image"
+                />
+
+        </LinearLayout>
+
+        <!-- Floating TextView for displaying selected chart point value -->
+
+        <TextView
+            android:id="@+id/tooltipTextView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text=""
+            android:visibility="gone"
+            android:textSize="14sp"
+            android:textColor="#000000"
+
+            android:padding="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_margin="8dp" />
+        <!-- Accelerometer X Chart Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/accelChartX"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Accelerometer Y Chart Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/accelChartY"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Accelerometer Z Chart Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/accelChartZ"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="vertical"-->
+<!--    android:background="@drawable/background_image"-->
+<!--    android:padding="16dp">-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/accelData"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Accelerometer: "-->
+<!--        android:textSize="18sp"-->
+
+<!--        android:layout_marginTop="16dp"-->
+<!--        />-->
+
+
+
+<!--    <com.github.mikephil.charting.charts.LineChart-->
+<!--        android:id="@+id/accelChart"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="300dp"-->
+<!--        android:layout_below="@+id/gyroscopeData"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+
+
+<!--        android:layout_marginTop="20dp"-->
+
+<!--        />-->
+<!--    &lt;!&ndash; Bar Chart for Accelerometer &ndash;&gt;-->
+<!--    <com.github.mikephil.charting.charts.BarChart-->
+<!--        android:id="@+id/acccelBarChart"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="300dp"-->
+
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        />-->
+<!--</LinearLayout>-->

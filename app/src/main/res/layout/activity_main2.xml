@@ -1,0 +1,12 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:padding="16dp"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <EditText android:id="@+id/et1" android:hint="Sepal Length" android:inputType="numberDecimal"/>
+    <EditText android:id="@+id/et2" android:hint="Sepal Width" android:inputType="numberDecimal"/>
+    <EditText android:id="@+id/et3" android:hint="Petal Length" android:inputType="numberDecimal"/>
+    <EditText android:id="@+id/et4" android:hint="Petal Width" android:inputType="numberDecimal"/>
+
+    <Button android:id="@+id/predictBtn" android:text="Predict"/>
+    <TextView android:id="@+id/resultText" android:textSize="18sp" android:paddingTop="20dp"/>
+</LinearLayout>
